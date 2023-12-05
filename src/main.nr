@@ -101,11 +101,11 @@ contract TranscientEscrow {
 
         // Create a new escrow with the sum of both amounts and put the sender as the owner
         let _ = TokenPrivateContextInterface::at(token.address).escrow(
-                &mut context,
-                FromEscrowStruct { address: context.this_address() },
-                OwnerEscrowStruct { address: context.msg_sender() },
-                amount1 + amount2,
-                0
+            &mut context,
+            FromEscrowStruct { address: context.this_address() },
+            OwnerEscrowStruct { address: context.msg_sender() },
+            amount1 + amount2,
+            0
         );
     }
 
